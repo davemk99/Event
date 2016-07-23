@@ -1,0 +1,6 @@
+{
+  "name": "Event",
+  "tagline": "This tiny library is created for adding Event support for C++.",
+  "body": "# EventLibrary is a tiny library for implementing Event mechanism for C++.\r\nYou can view samples at [Samples Folder](./Samples)\r\nHere is one of the examples\r\n```\r\n#include \"..\\..\\EventLibrary\\Event.h\"\r\nusing namespace std;\r\n\r\nclass Car {\r\nprivate:\r\n\r\n\r\n\tstring name;\r\n\tint numberOfSeats;\r\npublic:\r\n\tEvent NameChanged;\r\n\tEvent NumberOfSeatsChanged;\r\n\tvoid SetName(string name) {\r\n\t\tthis->name = name;\r\n\r\n\t\tNameChanged(this);\r\n\r\n\t}\r\n\r\n\tstring GetName() {\r\n\t\treturn this->name;\r\n\t}\r\n\tvoid SetNumberOfSeats(int seats) {\r\n\t\tthis->numberOfSeats = seats;\r\n\t\tNumberOfSeatsChanged(this);\r\n\t}\r\n\tint GetNumberOfSeats() {\r\n\t\treturn this->numberOfSeats;\r\n\t}\r\n\tCar(string name, int seats) {\r\n\t\tthis->name = name;\r\n\t\tthis->numberOfSeats = seats;\r\n\t}\r\n\r\n};\r\nint main()\r\n{\r\n\tCar car(\"Renault\", 4);\r\n\tcar.NameChanged += [](void* sender) {cout << ((Car*)sender)->GetName(); };\r\n\tcar.NumberOfSeatsChanged += [](void* sender) {cout << ((Car*)sender)->GetNumberOfSeats(); };\r\n\tcar.SetName(\"Nissan\");\r\n\tgetchar();\r\n\r\n\treturn 0;\r\n}\r\n```",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
