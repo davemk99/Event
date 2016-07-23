@@ -8,7 +8,7 @@ using namespace std;
 
 class Car {
 private:
-	
+
 
 	string name;
 	int numberOfSeats;
@@ -17,11 +17,11 @@ public:
 	Event NumberOfSeatsChanged;
 	void SetName(string name) {
 		this->name = name;
-		
+
 		NameChanged(this);
 
 	}
-	
+
 	string GetName() {
 		return this->name;
 	}
@@ -38,11 +38,11 @@ public:
 	}
 
 };
-int main() 
+int main()
 {
 	Car car("Renault", 4);
 	car.NameChanged += [](void* sender) {cout << ((Car*)sender)->GetName(); };
-	car.NumberOfSeatsChanged+= [](void* sender) {cout << ((Car*)sender)->GetNumberOfSeats(); };
+	car.NumberOfSeatsChanged += [](void* sender) {cout << ((Car*)sender)->GetNumberOfSeats(); };
 	car.SetName("Nissan");
 	getchar();
 
