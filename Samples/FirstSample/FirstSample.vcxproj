@@ -145,7 +145,7 @@
     <ClCompile Include="maincpp.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EventLibrary\EventLibrary.vcxproj">
+    <ProjectReference Include="..\..\EventLibrary\EventLibrary.vcxproj">
       <Project>{41e528da-8a47-48a1-bf8b-b693fb2b0e1c}</Project>
     </ProjectReference>
   </ItemGroup>
