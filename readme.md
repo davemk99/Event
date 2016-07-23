@@ -1,0 +1,1 @@
+EventLibrary is a tiny library for implementing Event mechanism for C++.There is a sample project for usage of the library.
