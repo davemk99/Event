@@ -1,1 +1,2 @@
-EventLibrary is a tiny library for implementing Event mechanism for C++.There is a sample project for usage of the library.
+EventLibrary is a tiny library for implementing Event mechanism for C++.
+You can view samples at [Samples Folder](./Samples)
