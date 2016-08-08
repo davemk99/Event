@@ -1,4 +1,5 @@
 #include "Event.h"
+using namespace std;
 void Event::EventHandler::SetEvent(function<void(void*)> func) {
 	this->events.push_back(func);
 }
