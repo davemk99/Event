@@ -1,19 +1,19 @@
-#include "stdincl.h"
-using namespace std;
 #pragma once
+#include "stdincl.h"
+
 class Event {
 private:
 	class EventHandler {
 	private:
-		list<function<void(void*)>> events;
+		std::list<std::function<void(void*)>> events;
 
 	public:
-		void SetEvent(function<void(void*)>);
+		void SetEvent(std::function<void(void*)>);
 
 		void operator()(void*);
 
 	}event;
 public:
-	Event operator+=(function<void(void*)>);
+	Event operator+=(std::function<void(void*)>);
 	void operator()(void*);
 };
