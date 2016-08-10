@@ -13,5 +13,6 @@ Event Event::operator+=(function<void(void*)> func) {
 	return *(this);
 }
 void Event::operator()(void* sender) {
-	this->event(sender);
+	std::thread thread([&]() {this->event(sender); });
+	thread.join();
 }

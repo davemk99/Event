@@ -36,9 +36,10 @@ public:
 };
 int main()
 {
+	
 	Car car("Renault", 4);
 	car.NameChanged += [](void* sender) {cout << (static_cast<Car*>(sender))->GetName(); };
-	car.NumberOfSeatsChanged += [](void* sender) {cout << (static_cast<Car*>(sender))->GetNumberOfSeats(); };
+	car.NumberOfSeatsChanged += [](void* sender) {cout << (static_cast<Car*>(sender))->GetNumberOfSeats()<<endl; };
 	car.SetName("Nissan");
 	getchar();
 
