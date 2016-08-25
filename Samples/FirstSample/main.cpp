@@ -9,8 +9,8 @@ private:
 	string name;
 	int numberOfSeats;
 public:
-	Event NameChanged;
-	Event NumberOfSeatsChanged;
+	Event<Car> NameChanged;
+	Event<Car> NumberOfSeatsChanged;
 	void SetName(string name) {
 		this->name = name;
 
@@ -38,8 +38,8 @@ int main()
 {
 	
 	Car car("Renault", 4);
-	car.NameChanged += [](void* sender) {cout << (static_cast<Car*>(sender))->GetName(); };
-	car.NumberOfSeatsChanged += [](void* sender) {cout << (static_cast<Car*>(sender))->GetNumberOfSeats()<<endl; };
+	car.NameChanged += [](Car sender) {cout << sender.GetName(); };
+	car.NumberOfSeatsChanged += [](Car sender) {cout << sender.GetNumberOfSeats()<<endl; };
 	car.SetName("Nissan");
 	getchar();
 
