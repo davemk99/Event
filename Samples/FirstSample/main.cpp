@@ -14,7 +14,7 @@ public:
 	void SetName(string name) {
 		this->name = name;
 
-		NameChanged(this);
+		NameChanged(*this);
 
 	}
 
@@ -23,7 +23,7 @@ public:
 	}
 	void SetNumberOfSeats(int seats) {
 		this->numberOfSeats = seats;
-		NumberOfSeatsChanged(this);
+		NumberOfSeatsChanged(*this);
 	}
 	int GetNumberOfSeats() {
 		return this->numberOfSeats;

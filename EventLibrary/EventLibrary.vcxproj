@@ -134,9 +134,6 @@
     <ClInclude Include="Event.h" />
     <ClInclude Include="stdincl.h" />
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Event.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
